@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --main-color: #DFE0D9;
+  }
+}
+
+body {
+  color: var(--main-color);
+  background-image: url('/images/background-main.svg');
+  background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  background-position: center center; /* Centraliza a imagem */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "workbench.colorTheme": "Omni",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+     "editor.lineHeight": 1.7,
+    "editor.rulers": [80, 120],
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.renderLineHighlight": "gutter",
+    "editor.formatOnSave": true,
+    "editor.cursorBlinking": "expand",
+    "explorer.compactFolders": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "editor.accessibilitySupport": "off",
+    "console-ninja.featureSet": "Community",
+    "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+}
