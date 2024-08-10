@@ -25,6 +25,11 @@ body {
   background-position: center center; /* Centraliza a imagem */
 }
 
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
