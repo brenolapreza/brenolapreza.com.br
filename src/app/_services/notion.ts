@@ -2,6 +2,7 @@
 
 import { Client } from "@notionhq/client";
 import { DataBase } from "./types/getPostsNotion.types";
+import type { IPageByIdProps } from "./types/getPageById";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
@@ -18,5 +19,8 @@ export const getPostsNotion = async () => {
 
 export const getPageById = async (pageId: string) => {
   const response = await notion.blocks.children.list({ block_id: pageId });
-  return response;
+
+  const notioBlocksChildren = response as unknown as IPageByIdProps;
+
+  return notioBlocksChildren;
 };
