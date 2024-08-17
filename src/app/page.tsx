@@ -13,18 +13,20 @@ export default async function Home() {
 
   return (
     <>
-      <main>
-        {posts.results.map((result) => {
-          const { Author, Nome } = result.properties;
-          const author = Author.people.map((author) => author.name);
-          const postName = Nome.title.map((author) => author.text.content);
+      <main className="container">
+        <div className="grid grid-cols-2 gap-5">
+          {posts.results.map((result) => {
+            const { Author, Nome } = result.properties;
+            const author = Author.people.map((author) => author.name);
+            const postName = Nome.title.map((author) => author.text.content);
 
-          return (
-            <Link key={result.id} href={`/blog/${result.id}`}>
-              <Card id={result.id} author={author} postName={postName} />
-            </Link>
-          );
-        })}
+            return (
+              <Link key={result.id} href={`/blog/${result.id}`}>
+                <Card id={result.id} author={author} postName={postName} />
+              </Link>
+            );
+          })}
+        </div>
       </main>
     </>
   );

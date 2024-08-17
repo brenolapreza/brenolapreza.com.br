@@ -8,9 +8,9 @@ export interface CardProps {
 
 export const Card = ({ author, id, postName }: CardProps) => {
   return (
-    <div>
+    <div className="bg-main-background border border-mainStroke p-2">
       <h2>{postName}</h2>
-      <p>{author}</p>
+      <p className="text-sm">Autor: {author}</p>
     </div>
   );
 };

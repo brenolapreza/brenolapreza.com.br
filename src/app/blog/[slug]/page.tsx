@@ -2,7 +2,6 @@ import { getPageById } from "@/app/_services/notion";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const getPost = await getPageById(params.slug);
-  console.log(getPost);
 
   return (
     <div>
