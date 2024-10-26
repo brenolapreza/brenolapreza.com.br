@@ -13,3 +13,5 @@ export default async function Page({params}: IBlogPageProps) {
     </div>
   );
 }
+
+export const revalidate = 60; 
