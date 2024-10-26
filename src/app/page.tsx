@@ -1,16 +1,9 @@
-import {
-  DatabaseObjectResponse,
-  GetDatabaseResponse,
-  PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
-import { getPageById, getPostsNotion } from "./_services/notion";
-import { DataBase } from "./_services/types/getPostsNotion.types";
 import { Card } from "@/components/card";
+import { getDatabasesNotion } from "@/interfaces/actions/get-database-notion.action";
 import Link from "next/link";
 
 export default async function Home() {
-  const posts = await getPostsNotion();
-
+  const posts = await getDatabasesNotion()
   return (
     <>
       <main className="container">
@@ -21,9 +14,13 @@ export default async function Home() {
             const postName = Nome.title.map((author) => author.text.content);
 
             return (
-              <Link key={result.id} href={`/blog/${result.id}`}>
-                <Card id={result.id} author={author} postName={postName} />
-              </Link>
+             <Link key={result.id} href={`/blog/${result.id}`} >
+             <Card
+                postName={postName}
+                author={author}
+                id={result.id}
+              />
+             </Link>
             );
           })}
         </div>
