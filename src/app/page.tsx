@@ -1,6 +1,7 @@
 import { Card } from "@/components/card";
 import { getDatabasesNotion } from "@/interfaces/actions/get-database-notion.action";
 import Link from "next/link";
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const posts = await getDatabasesNotion()
@@ -28,3 +29,4 @@ export default async function Home() {
     </>
   );
 }
+export const revalidate = 60; 
