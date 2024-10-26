@@ -1,15 +1,15 @@
-import { getPageById } from "@/app/_services/notion";
+import { getPageNotionByIdToMd } from "@/interfaces/actions/get-page-notion.action";
+import type { IBlogPageProps } from "./types";
+import { marked } from "marked";
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const getPost = await getPageById(params.slug);
+export default async function Page({params}: IBlogPageProps) {
+  const getPost = await getPageNotionByIdToMd(params.slug)
+  const htmlText = marked(getPost.parent);
+  console.log(htmlText)
 
   return (
     <div>
-      <div>
-        {getPost.results.map(
-          (result) => result.heading_1?.rich_text[0].plain_text
-        )}
-      </div>
+        <div dangerouslySetInnerHTML={{ __html: htmlText }} />
     </div>
   );
 }
