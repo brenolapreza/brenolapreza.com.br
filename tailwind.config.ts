@@ -12,7 +12,7 @@ const config: Config = {
         mainStroke: "#252525",
       },
       backgroundImage: {
-        "main-background": "url('../../public/images/background-main.svg')",
+        "main-background": "url('/images/background-main.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

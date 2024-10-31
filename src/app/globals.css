@@ -19,10 +19,7 @@
 
 body {
   color: var(--main-color);
-  background-image: url('/images/background-main.svg');
-  background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
-  background-repeat: no-repeat; /* Evita a repetição da imagem */
-  background-position: center center; /* Centraliza a imagem */
+
 }
 
 .container {
