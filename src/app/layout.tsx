@@ -15,9 +15,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
-      <body className={jetBrains_Mono.className}>
+      <body className={`${jetBrains_Mono.className} bg-main-background bg-cover`}>
         <Layout>{children}</Layout>
       </body>
     </html>

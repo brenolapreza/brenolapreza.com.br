@@ -1,7 +1,7 @@
 import { notionClient } from "@/data/services/notionClient";
 import { n2m } from "@/data/services/notionToMarkdown";
 import type { INotionListPage } from "@/domain/contracts/notion-page.contracts";
-import type { IlistPageToMd, IPageByIdProps } from "@/domain/models/notion-page.model";
+import type { IPageByIdProps } from "@/domain/models/notion-page.model";
 
 export class ListNotionPage implements INotionListPage {
   async listPage(pageId: string): Promise<IPageByIdProps> {
