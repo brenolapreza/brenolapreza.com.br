@@ -15,14 +15,15 @@ export default function Qrcode() {
           type="text"
           value={valueState}
           onChange={(e) => setValueState(e.target.value)}
-          placeholder="bota o link do qr code aqui 🤨"
+          placeholder="bota o link do qr code aqui 💙"
         />
-        <button
+        <a
           className="p-2 bg-black"
-          onClick={() => handleGenerateQRCode(valueState)}
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
         >
           Gerar 💀
-        </button>
+        </a>
       </div>
       <div className="flex gap-3 p-8">
         {valueState.length > 0 && (
